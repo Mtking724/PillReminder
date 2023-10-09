@@ -18,12 +18,14 @@ struct ContentView: View {
                 .offset(y: -100)
           Text("おくすりマインダー")
                 .font(.largeTitle)
+                .fontWeight(.semibold)
                 .foregroundColor(Color.black)
                 .offset(y: -75)
             Rectangle()
                 .frame(width:250,height:100)
                 .foregroundColor(Color.mint)
                 .cornerRadius(100)
+                .offset(y: -30)
                 .overlay(
             Button(action: {
                 //タップされた時のアクション
@@ -32,6 +34,7 @@ struct ContentView: View {
                 Text("START")
                     .font(.largeTitle)
                     .foregroundColor(Color.white)
+                    .offset(y: -30)
             }
             )
         }
