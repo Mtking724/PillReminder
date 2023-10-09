@@ -10,10 +10,30 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Image("grandma")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width:300, height:300)
+                .padding()
+                .offset(y: -100)
+          Text("おくすりマインダー")
+                .font(.largeTitle)
+                .foregroundColor(Color.black)
+                .offset(y: -75)
+            Rectangle()
+                .frame(width:250,height:100)
+                .foregroundColor(Color.mint)
+                .cornerRadius(100)
+                .overlay(
+            Button(action: {
+                //タップされた時のアクション
+            })
+            {
+                Text("START")
+                    .font(.largeTitle)
+                    .foregroundColor(Color.white)
+            }
+            )
         }
         .padding()
     }
